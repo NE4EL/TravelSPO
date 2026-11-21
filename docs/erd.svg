@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 760" width="1220" height="760" font-family="DejaVu Sans, Arial, sans-serif" font-size="12">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1a3d6d"/></marker></defs>
+<rect x="0" y="0" width="1220" height="760" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<rect x="60" y="60" width="290" height="116" rx="0" fill="#fff" stroke="#1a3d6d" stroke-width="1.5"/>
+<rect x="60" y="60" width="290" height="28" rx="0" fill="#1a3d6d" stroke="#1a3d6d" stroke-width="0"/>
+<text x="205.0" y="79" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">users</text>
+<rect x="60" y="88" width="290" height="22" rx="0" fill="#fff7d6" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="66" y="103" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00">PK</text>
+<text x="112" y="103" text-anchor="start" font-size="12" font-weight="bold" fill="#171717">id</text>
+<text x="344" y="103" text-anchor="end" font-size="10" font-weight="normal" fill="#555">SERIAL</text>
+<rect x="60" y="110" width="290" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="66" y="125" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="112" y="125" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">email</text>
+<text x="344" y="125" text-anchor="end" font-size="10" font-weight="normal" fill="#555">VARCHAR(255) UQ</text>
+<rect x="60" y="132" width="290" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="66" y="147" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="112" y="147" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">password_hash</text>
+<text x="344" y="147" text-anchor="end" font-size="10" font-weight="normal" fill="#555">VARCHAR(255)</text>
+<rect x="60" y="154" width="290" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="66" y="169" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="112" y="169" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">created_at</text>
+<text x="344" y="169" text-anchor="end" font-size="10" font-weight="normal" fill="#555">TIMESTAMP</text>
+<rect x="450" y="60" width="300" height="204" rx="0" fill="#fff" stroke="#1a3d6d" stroke-width="1.5"/>
+<rect x="450" y="60" width="300" height="28" rx="0" fill="#1a3d6d" stroke="#1a3d6d" stroke-width="0"/>
+<text x="600.0" y="79" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">trips</text>
+<rect x="450" y="88" width="300" height="22" rx="0" fill="#fff7d6" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="103" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00">PK</text>
+<text x="502" y="103" text-anchor="start" font-size="12" font-weight="bold" fill="#171717">id</text>
+<text x="744" y="103" text-anchor="end" font-size="10" font-weight="normal" fill="#555">SERIAL</text>
+<rect x="450" y="110" width="300" height="22" rx="0" fill="#e4f0ff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="125" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00">FK</text>
+<text x="502" y="125" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">user_id</text>
+<text x="744" y="125" text-anchor="end" font-size="10" font-weight="normal" fill="#555">INTEGER</text>
+<rect x="450" y="132" width="300" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="147" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="502" y="147" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">title</text>
+<text x="744" y="147" text-anchor="end" font-size="10" font-weight="normal" fill="#555">VARCHAR(120)</text>
+<rect x="450" y="154" width="300" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="169" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="502" y="169" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">destination</text>
+<text x="744" y="169" text-anchor="end" font-size="10" font-weight="normal" fill="#555">VARCHAR(120)</text>
+<rect x="450" y="176" width="300" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="191" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="502" y="191" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">start_date</text>
+<text x="744" y="191" text-anchor="end" font-size="10" font-weight="normal" fill="#555">DATE</text>
+<rect x="450" y="198" width="300" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="213" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="502" y="213" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">end_date</text>
+<text x="744" y="213" text-anchor="end" font-size="10" font-weight="normal" fill="#555">DATE</text>
+<rect x="450" y="220" width="300" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="235" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="502" y="235" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">budget_limit</text>
+<text x="744" y="235" text-anchor="end" font-size="10" font-weight="normal" fill="#555">NUMERIC(12,2)</text>
+<rect x="450" y="242" width="300" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="257" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="502" y="257" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">created_at</text>
+<text x="744" y="257" text-anchor="end" font-size="10" font-weight="normal" fill="#555">TIMESTAMP</text>
+<rect x="850" y="60" width="310" height="182" rx="0" fill="#fff" stroke="#1a3d6d" stroke-width="1.5"/>
+<rect x="850" y="60" width="310" height="28" rx="0" fill="#1a3d6d" stroke="#1a3d6d" stroke-width="0"/>
+<text x="1005.0" y="79" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">activities</text>
+<rect x="850" y="88" width="310" height="22" rx="0" fill="#fff7d6" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="103" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00">PK</text>
+<text x="902" y="103" text-anchor="start" font-size="12" font-weight="bold" fill="#171717">id</text>
+<text x="1154" y="103" text-anchor="end" font-size="10" font-weight="normal" fill="#555">SERIAL</text>
+<rect x="850" y="110" width="310" height="22" rx="0" fill="#e4f0ff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="125" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00">FK</text>
+<text x="902" y="125" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">trip_id</text>
+<text x="1154" y="125" text-anchor="end" font-size="10" font-weight="normal" fill="#555">INTEGER</text>
+<rect x="850" y="132" width="310" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="147" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="902" y="147" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">title</text>
+<text x="1154" y="147" text-anchor="end" font-size="10" font-weight="normal" fill="#555">VARCHAR(120)</text>
+<rect x="850" y="154" width="310" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="169" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="902" y="169" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">activity_date</text>
+<text x="1154" y="169" text-anchor="end" font-size="10" font-weight="normal" fill="#555">DATE</text>
+<rect x="850" y="176" width="310" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="191" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="902" y="191" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">starts_at</text>
+<text x="1154" y="191" text-anchor="end" font-size="10" font-weight="normal" fill="#555">TIME NULL</text>
+<rect x="850" y="198" width="310" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="213" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="902" y="213" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">ends_at</text>
+<text x="1154" y="213" text-anchor="end" font-size="10" font-weight="normal" fill="#555">TIME NULL</text>
+<rect x="850" y="220" width="310" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="235" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="902" y="235" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">description</text>
+<text x="1154" y="235" text-anchor="end" font-size="10" font-weight="normal" fill="#555">TEXT NULL</text>
+<rect x="450" y="390" width="300" height="160" rx="0" fill="#fff" stroke="#1a3d6d" stroke-width="1.5"/>
+<rect x="450" y="390" width="300" height="28" rx="0" fill="#1a3d6d" stroke="#1a3d6d" stroke-width="0"/>
+<text x="600.0" y="409" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">expenses</text>
+<rect x="450" y="418" width="300" height="22" rx="0" fill="#fff7d6" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="433" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00">PK</text>
+<text x="502" y="433" text-anchor="start" font-size="12" font-weight="bold" fill="#171717">id</text>
+<text x="744" y="433" text-anchor="end" font-size="10" font-weight="normal" fill="#555">SERIAL</text>
+<rect x="450" y="440" width="300" height="22" rx="0" fill="#e4f0ff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="455" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00">FK</text>
+<text x="502" y="455" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">trip_id</text>
+<text x="744" y="455" text-anchor="end" font-size="10" font-weight="normal" fill="#555">INTEGER</text>
+<rect x="450" y="462" width="300" height="22" rx="0" fill="#e4f0ff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="477" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00">FK</text>
+<text x="502" y="477" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">activity_id</text>
+<text x="744" y="477" text-anchor="end" font-size="10" font-weight="normal" fill="#555">INTEGER NULL</text>
+<rect x="450" y="484" width="300" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="499" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="502" y="499" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">title</text>
+<text x="744" y="499" text-anchor="end" font-size="10" font-weight="normal" fill="#555">VARCHAR(120)</text>
+<rect x="450" y="506" width="300" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="521" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="502" y="521" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">amount</text>
+<text x="744" y="521" text-anchor="end" font-size="10" font-weight="normal" fill="#555">NUMERIC(12,2)</text>
+<rect x="450" y="528" width="300" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="456" y="543" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="502" y="543" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">created_at</text>
+<text x="744" y="543" text-anchor="end" font-size="10" font-weight="normal" fill="#555">TIMESTAMP</text>
+<rect x="850" y="390" width="310" height="138" rx="0" fill="#fff" stroke="#1a3d6d" stroke-width="1.5"/>
+<rect x="850" y="390" width="310" height="28" rx="0" fill="#1a3d6d" stroke="#1a3d6d" stroke-width="0"/>
+<text x="1005.0" y="409" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">packing_items</text>
+<rect x="850" y="418" width="310" height="22" rx="0" fill="#fff7d6" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="433" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00">PK</text>
+<text x="902" y="433" text-anchor="start" font-size="12" font-weight="bold" fill="#171717">id</text>
+<text x="1154" y="433" text-anchor="end" font-size="10" font-weight="normal" fill="#555">SERIAL</text>
+<rect x="850" y="440" width="310" height="22" rx="0" fill="#e4f0ff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="455" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00">FK</text>
+<text x="902" y="455" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">trip_id</text>
+<text x="1154" y="455" text-anchor="end" font-size="10" font-weight="normal" fill="#555">INTEGER</text>
+<rect x="850" y="462" width="310" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="477" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="902" y="477" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">name</text>
+<text x="1154" y="477" text-anchor="end" font-size="10" font-weight="normal" fill="#555">VARCHAR(120)</text>
+<rect x="850" y="484" width="310" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="499" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="902" y="499" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">is_packed</text>
+<text x="1154" y="499" text-anchor="end" font-size="10" font-weight="normal" fill="#555">BOOLEAN</text>
+<rect x="850" y="506" width="310" height="22" rx="0" fill="#fff" stroke="#c5cfdd" stroke-width="0.7"/>
+<text x="856" y="521" text-anchor="start" font-size="10" font-weight="bold" fill="#8a5a00"></text>
+<text x="902" y="521" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">sort_order</text>
+<text x="1154" y="521" text-anchor="end" font-size="10" font-weight="normal" fill="#555">INTEGER</text>
+<polyline points="450,121 400,121 400,99 350,99" fill="none" stroke="#1a3d6d" stroke-width="1.6" marker-end="url(#arr)"/>
+<circle cx="450" cy="121" r="3.5" fill="#1a3d6d"/>
+<text x="438" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="#b00020">N</text>
+<text x="362" y="94" text-anchor="middle" font-size="12" font-weight="bold" fill="#b00020">1</text>
+<polyline points="850,121 800,121 800,99 750,99" fill="none" stroke="#1a3d6d" stroke-width="1.6" marker-end="url(#arr)"/>
+<circle cx="850" cy="121" r="3.5" fill="#1a3d6d"/>
+<text x="838" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="#b00020">N</text>
+<text x="762" y="94" text-anchor="middle" font-size="12" font-weight="bold" fill="#b00020">1</text>
+<polyline points="450,451 412,451 412,99 450,99" fill="none" stroke="#1a3d6d" stroke-width="1.6" marker-end="url(#arr)"/>
+<circle cx="450" cy="451" r="3.5" fill="#1a3d6d"/>
+<text x="438" y="446" text-anchor="middle" font-size="12" font-weight="bold" fill="#b00020">N</text>
+<text x="438" y="94" text-anchor="middle" font-size="12" font-weight="bold" fill="#b00020">1</text>
+<polyline points="750,473 790,473 790,77 850,77" fill="none" stroke="#1a3d6d" stroke-width="1.6" marker-end="url(#arr)"/>
+<circle cx="750" cy="473" r="3.5" fill="#1a3d6d"/>
+<text x="762" y="468" text-anchor="middle" font-size="12" font-weight="bold" fill="#b00020">N</text>
+<text x="838" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#b00020">1</text>
+<polyline points="850,451 810,451 810,99 750,99" fill="none" stroke="#1a3d6d" stroke-width="1.6" marker-end="url(#arr)"/>
+<circle cx="850" cy="451" r="3.5" fill="#1a3d6d"/>
+<text x="838" y="446" text-anchor="middle" font-size="12" font-weight="bold" fill="#b00020">N</text>
+<text x="762" y="94" text-anchor="middle" font-size="12" font-weight="bold" fill="#b00020">1</text>
+<text x="610" y="622" text-anchor="middle" font-size="16" font-weight="bold" fill="#171717">Рис. 1. ER-диаграмма БД планировщика путешествий (связи «поле FK → поле PK»)</text>
+<rect x="60" y="648" width="1100" height="78" rx="0" fill="#f6f8fb" stroke="#c5cfdd" stroke-width="1"/>
+<rect x="76" y="665" width="16" height="14" rx="0" fill="#fff7d6" stroke="#888" stroke-width="1"/>
+<text x="100" y="677" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">PK — первичный ключ</text>
+<rect x="278" y="665" width="16" height="14" rx="0" fill="#e4f0ff" stroke="#888" stroke-width="1"/>
+<text x="302" y="677" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">FK — внешний ключ</text>
+<line x1="488" y1="672" x2="538" y2="672" stroke="#1a3d6d" stroke-width="1.6" marker-end="url(#arr)"/><circle cx="488" cy="672" r="3.5" fill="#1a3d6d"/>
+<text x="550" y="677" text-anchor="start" font-size="12" font-weight="normal" fill="#171717">ссылка поля FK на поле PK</text>
+<text x="76" y="707" text-anchor="start" font-size="12" font-weight="normal" fill="#b00020">N — «много» (сторона FK), 1 — «один» (сторона PK); UQ — уникальное значение</text>
+</svg>

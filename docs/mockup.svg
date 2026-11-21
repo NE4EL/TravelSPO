@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="0" y="0" width="1200" height="750" rx="0" fill="#fff" stroke="#fff" stroke-width="0"/>
+<rect x="25" y="25" width="560" height="330" rx="3" fill="#fff" stroke="#111" stroke-width="1.2"/>
+<rect x="25" y="25" width="560" height="34" rx="3" fill="#202734" stroke="#202734" stroke-width="0"/>
+<text x="40" y="47" text-anchor="start" font-size="13" font-weight="bold" fill="#fff">TravelPlanner</text>
+<text x="260" y="47" text-anchor="start" font-size="10" font-weight="bold" fill="#fff">Поездки</text>
+<line x1="260" y1="54" x2="318" y2="54" stroke="#f4c542" stroke-width="3"/>
+<text x="337" y="47" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Расписание</text>
+<text x="414" y="47" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Бюджет</text>
+<text x="491" y="47" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Вещи</text>
+<text x="43" y="87" text-anchor="start" font-size="15" font-weight="bold" fill="#111">Мои поездки</text>
+<rect x="435" y="69" width="132" height="26" rx="3" fill="#202734" stroke="#202734" stroke-width="1"/>
+<text x="501.0" y="87" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">+ Новая поездка</text>
+<rect x="43" y="110" width="524" height="60" rx="3" fill="#fff" stroke="#555" stroke-width="1"/>
+<text x="57" y="132" text-anchor="start" font-size="13" font-weight="bold" fill="#111">Италия: Рим</text>
+<text x="57" y="153" text-anchor="start" font-size="11" font-weight="normal" fill="#555">12–18 июня</text>
+<text x="435" y="145" text-anchor="start" font-size="11" font-weight="normal" fill="#111">7 дней</text>
+<rect x="43" y="182" width="524" height="60" rx="3" fill="#fff" stroke="#555" stroke-width="1"/>
+<text x="57" y="204" text-anchor="start" font-size="13" font-weight="bold" fill="#111">Горы и озёра</text>
+<text x="57" y="225" text-anchor="start" font-size="11" font-weight="normal" fill="#555">3–7 августа</text>
+<text x="435" y="217" text-anchor="start" font-size="11" font-weight="normal" fill="#111">5 дней</text>
+<rect x="43" y="254" width="524" height="60" rx="3" fill="#fff" stroke="#555" stroke-width="1"/>
+<text x="57" y="276" text-anchor="start" font-size="13" font-weight="bold" fill="#111">Выходные у моря</text>
+<text x="57" y="297" text-anchor="start" font-size="11" font-weight="normal" fill="#555">14–16 сентября</text>
+<text x="435" y="289" text-anchor="start" font-size="11" font-weight="normal" fill="#111">3 дня</text>
+<rect x="615" y="25" width="560" height="330" rx="3" fill="#fff" stroke="#111" stroke-width="1.2"/>
+<rect x="615" y="25" width="560" height="34" rx="3" fill="#202734" stroke="#202734" stroke-width="0"/>
+<text x="630" y="47" text-anchor="start" font-size="13" font-weight="bold" fill="#fff">TravelPlanner</text>
+<text x="850" y="47" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Поездки</text>
+<text x="927" y="47" text-anchor="start" font-size="10" font-weight="bold" fill="#fff">Расписание</text>
+<line x1="927" y1="54" x2="985" y2="54" stroke="#f4c542" stroke-width="3"/>
+<text x="1004" y="47" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Бюджет</text>
+<text x="1081" y="47" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Вещи</text>
+<text x="633" y="87" text-anchor="start" font-size="15" font-weight="bold" fill="#111">Расписание поездки</text>
+<text x="633" y="109" text-anchor="start" font-size="11" font-weight="normal" fill="#555">Рим · 12–18 июня</text>
+<text x="633" y="134" text-anchor="start" font-size="12" font-weight="bold" fill="#111">13 июня</text>
+<rect x="1035" y="73" width="122" height="26" rx="3" fill="#202734" stroke="#202734" stroke-width="1"/>
+<text x="1096.0" y="91" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">+ Мероприятие</text>
+<text x="640" y="157" text-anchor="start" font-size="11" font-weight="bold" fill="#111">Время</text>
+<line x1="640" y1="163" x2="730" y2="163" stroke="#f4c542" stroke-width="3"/>
+<text x="745" y="157" text-anchor="start" font-size="11" font-weight="bold" fill="#111">Мероприятие</text>
+<line x1="745" y1="163" x2="835" y2="163" stroke="#f4c542" stroke-width="3"/>
+<text x="960" y="157" text-anchor="start" font-size="11" font-weight="bold" fill="#111">Место</text>
+<line x1="960" y1="163" x2="1050" y2="163" stroke="#f4c542" stroke-width="3"/>
+<rect x="633" y="173" width="524" height="42" rx="0" fill="#f7f7f7" stroke="#bbb" stroke-width="0.6"/>
+<text x="640" y="199" text-anchor="start" font-size="11" font-weight="normal" fill="#111">09:30</text>
+<text x="745" y="199" text-anchor="start" font-size="11" font-weight="normal" fill="#111">Колизей</text>
+<text x="960" y="199" text-anchor="start" font-size="11" font-weight="normal" fill="#111">Piazza del Colosseo</text>
+<rect x="633" y="216" width="524" height="42" rx="0" fill="#fff" stroke="#bbb" stroke-width="0.6"/>
+<text x="640" y="242" text-anchor="start" font-size="11" font-weight="normal" fill="#111">13:00</text>
+<text x="745" y="242" text-anchor="start" font-size="11" font-weight="normal" fill="#111">Обед</text>
+<text x="960" y="242" text-anchor="start" font-size="11" font-weight="normal" fill="#111">Центр</text>
+<rect x="633" y="259" width="524" height="42" rx="0" fill="#f7f7f7" stroke="#bbb" stroke-width="0.6"/>
+<text x="640" y="285" text-anchor="start" font-size="11" font-weight="normal" fill="#111">16:00</text>
+<text x="745" y="285" text-anchor="start" font-size="11" font-weight="normal" fill="#111">Форум</text>
+<text x="960" y="285" text-anchor="start" font-size="11" font-weight="normal" fill="#111">Via della Salara Vecchia</text>
+<rect x="25" y="385" width="560" height="330" rx="3" fill="#fff" stroke="#111" stroke-width="1.2"/>
+<rect x="25" y="385" width="560" height="34" rx="3" fill="#202734" stroke="#202734" stroke-width="0"/>
+<text x="40" y="407" text-anchor="start" font-size="13" font-weight="bold" fill="#fff">TravelPlanner</text>
+<text x="260" y="407" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Поездки</text>
+<text x="337" y="407" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Расписание</text>
+<text x="414" y="407" text-anchor="start" font-size="10" font-weight="bold" fill="#fff">Бюджет</text>
+<line x1="414" y1="414" x2="472" y2="414" stroke="#f4c542" stroke-width="3"/>
+<text x="491" y="407" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Вещи</text>
+<text x="43" y="447" text-anchor="start" font-size="15" font-weight="bold" fill="#111">Бюджет поездки</text>
+<text x="43" y="471" text-anchor="start" font-size="11" font-weight="normal" fill="#555">Планируемый бюджет</text>
+<text x="43" y="503" text-anchor="start" font-size="22" font-weight="bold" fill="#111">80 000 ₽</text>
+<text x="245" y="471" text-anchor="start" font-size="11" font-weight="normal" fill="#555">Расходы</text>
+<text x="245" y="503" text-anchor="start" font-size="22" font-weight="bold" fill="#111">34 500 ₽</text>
+<text x="435" y="471" text-anchor="start" font-size="11" font-weight="normal" fill="#555">Остаток</text>
+<text x="435" y="503" text-anchor="start" font-size="22" font-weight="bold" fill="#111">45 500 ₽</text>
+<line x1="43" y1="517" x2="567" y2="517" stroke="#f4c542" stroke-width="3"/>
+<text x="43" y="550" text-anchor="start" font-size="11" font-weight="bold" fill="#111">Расход</text>
+<text x="435" y="550" text-anchor="start" font-size="11" font-weight="bold" fill="#111">Сумма</text>
+<rect x="43" y="562" width="524" height="38" rx="0" fill="#f7f7f7" stroke="#bbb" stroke-width="0.6"/>
+<text x="55" y="586" text-anchor="start" font-size="11" font-weight="normal" fill="#171717">Музеи</text>
+<text x="450" y="586" text-anchor="start" font-size="11" font-weight="normal" fill="#171717">8 500 ₽</text>
+<rect x="43" y="601" width="524" height="38" rx="0" fill="#fff" stroke="#bbb" stroke-width="0.6"/>
+<text x="55" y="625" text-anchor="start" font-size="11" font-weight="normal" fill="#171717">Питание</text>
+<text x="450" y="625" text-anchor="start" font-size="11" font-weight="normal" fill="#171717">18 000 ₽</text>
+<rect x="43" y="640" width="524" height="38" rx="0" fill="#f7f7f7" stroke="#bbb" stroke-width="0.6"/>
+<text x="55" y="664" text-anchor="start" font-size="11" font-weight="normal" fill="#171717">Транспорт</text>
+<text x="450" y="664" text-anchor="start" font-size="11" font-weight="normal" fill="#171717">8 000 ₽</text>
+<rect x="615" y="385" width="560" height="330" rx="3" fill="#fff" stroke="#111" stroke-width="1.2"/>
+<rect x="615" y="385" width="560" height="34" rx="3" fill="#202734" stroke="#202734" stroke-width="0"/>
+<text x="630" y="407" text-anchor="start" font-size="13" font-weight="bold" fill="#fff">TravelPlanner</text>
+<text x="850" y="407" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Поездки</text>
+<text x="927" y="407" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Расписание</text>
+<text x="1004" y="407" text-anchor="start" font-size="10" font-weight="normal" fill="#c5c9d0">Бюджет</text>
+<text x="1081" y="407" text-anchor="start" font-size="10" font-weight="bold" fill="#fff">Вещи</text>
+<line x1="1081" y1="414" x2="1139" y2="414" stroke="#f4c542" stroke-width="3"/>
+<text x="633" y="447" text-anchor="start" font-size="15" font-weight="bold" fill="#111">Список вещей</text>
+<rect x="1031" y="432" width="126" height="26" rx="3" fill="#202734" stroke="#202734" stroke-width="1"/>
+<text x="1094.0" y="450" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">+ Добавить вещь</text>
+<rect x="637" y="475" width="18" height="18" rx="2" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<text x="647" y="489" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">✓</text>
+<text x="669" y="490" text-anchor="start" font-size="12" font-weight="normal" fill="#111">Паспорт</text>
+<line x1="635" y1="506" x2="1155" y2="506" stroke="#ddd" stroke-width="1"/>
+<rect x="637" y="517" width="18" height="18" rx="2" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<text x="647" y="531" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">✓</text>
+<text x="669" y="532" text-anchor="start" font-size="12" font-weight="normal" fill="#111">Билеты</text>
+<line x1="635" y1="548" x2="1155" y2="548" stroke="#ddd" stroke-width="1"/>
+<rect x="637" y="559" width="18" height="18" rx="2" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<text x="647" y="573" text-anchor="middle" font-size="15" font-weight="bold" fill="#111"></text>
+<text x="669" y="574" text-anchor="start" font-size="12" font-weight="normal" fill="#111">Зарядное устройство</text>
+<line x1="635" y1="590" x2="1155" y2="590" stroke="#ddd" stroke-width="1"/>
+<rect x="637" y="601" width="18" height="18" rx="2" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<text x="647" y="615" text-anchor="middle" font-size="15" font-weight="bold" fill="#111"></text>
+<text x="669" y="616" text-anchor="start" font-size="12" font-weight="normal" fill="#111">Аптечка</text>
+<line x1="635" y1="632" x2="1155" y2="632" stroke="#ddd" stroke-width="1"/>
+<rect x="637" y="643" width="18" height="18" rx="2" fill="#fff" stroke="#222" stroke-width="1.2"/>
+<text x="647" y="657" text-anchor="middle" font-size="15" font-weight="bold" fill="#111"></text>
+<text x="669" y="658" text-anchor="start" font-size="12" font-weight="normal" fill="#111">Удобная обувь</text>
+<line x1="635" y1="674" x2="1155" y2="674" stroke="#ddd" stroke-width="1"/>
+</svg>
