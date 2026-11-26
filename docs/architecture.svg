@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="360" viewBox="0 0 1120 360" font-family="Arial, sans-serif" role="img" aria-labelledby="title description">
   <title id="title">Архитектура и обмен данными в TravelPlanner</title>
-  <desc id="description">Браузер с React обменивается HTTP-запросами и ответами с FastAPI. Внутри сервера SQLAlchemy Core и драйвер psycopg выполняют SQL-запросы к PostgreSQL. Alembic применяет миграции схемы перед запуском сервера.</desc>
+  <desc id="description">Двунаправленные стрелки связывают браузер с FastAPI, FastAPI со слоем данных и слой данных с PostgreSQL: в одну сторону идут запросы, в обратную возвращаются результаты и ошибки. PostgreSQL отвечает на запросы, а не вызывает функции сервера. Отдельная стрелка Alembic к PostgreSQL обозначает применение миграций.</desc>
   <defs>
-    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
-      <path d="M0 0 L7 3.5 L0 7" fill="none" stroke="#111" stroke-width="1"/>
+    <marker id="arrow" markerWidth="8" markerHeight="8" viewBox="0 0 8 8" refX="8" refY="4" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#111"/>
     </marker>
   </defs>
   <rect width="1120" height="360" fill="#fff"/>
@@ -46,17 +46,16 @@
       <text x="932" y="276">DDL</text>
     </g>
   </g>
-  <g fill="none" stroke="#111" stroke-width="1.1" marker-end="url(#arrow)">
-    <path d="M240 142 H312"/>
-    <path d="M315 166 H243"/>
-    <path d="M535 142 H607"/>
-    <path d="M610 166 H538"/>
-    <path d="M840 142 H912"/>
-    <path d="M915 166 H843"/>
+  <g fill="none" stroke="#111" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)">
+    <path d="M243 153 H312"/>
+    <path d="M538 153 H607"/>
+    <path d="M843 153 H912"/>
+  </g>
+  <g fill="none" stroke="#111" stroke-width="1.5" marker-end="url(#arrow)">
     <path d="M840 284 H1005 V210"/>
   </g>
   <g fill="#444" font-size="13">
-    <text x="25" y="248">Стрелки: запрос → / ← ответ.</text>
+    <text x="25" y="248">Связи ↔: запросы и ответы.</text>
     <text x="25" y="272">SQLAlchemy и psycopg —</text>
     <text x="25" y="294">части сервера приложения.</text>
     <text x="25" y="320">Alembic запускается до Uvicorn.</text>
