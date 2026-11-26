@@ -93,6 +93,7 @@ activities = sa.Table(
         "ends_at IS NULL OR (starts_at IS NOT NULL AND ends_at >= starts_at)"
     ),
 )
+sa.Index("uq_activities_id_trip_id", activities.c.id, activities.c.trip_id, unique=True)
 
 expenses = sa.Table(
     "expenses",
@@ -104,6 +105,14 @@ expenses = sa.Table(
     sa.Column("amount", sa.Numeric(12, 2), nullable=False),
     created_at(),
     sa.CheckConstraint("amount > 0"),
+    # Keep the simple FK for SET NULL; check the pair after its delete action.
+    sa.ForeignKeyConstraint(
+        ["activity_id", "trip_id"],
+        ["activities.id", "activities.trip_id"],
+        name="fk_expenses_activity_trip",
+        deferrable=True,
+        initially="DEFERRED",
+    ),
 )
 
 packing_items = sa.Table(

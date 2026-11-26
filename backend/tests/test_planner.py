@@ -1,9 +1,12 @@
+from os import environ
 from pathlib import Path
 
 import pytest
 import sqlalchemy as sa
 from alembic import command
+from alembic.autogenerate import compare_metadata
 from alembic.config import Config
+from alembic.migration import MigrationContext
 from app import db
 from app.main import app
 from fastapi.testclient import TestClient
@@ -27,9 +30,11 @@ ACTIVITY = {
 @pytest.fixture
 def client(tmp_path, monkeypatch):
     engine = sa.create_engine(
-        sa.URL.create("sqlite", database=str(tmp_path / "travel.db"))
+        environ.get("TEST_DATABASE_URL")
+        or sa.URL.create("sqlite", database=str(tmp_path / "travel.db"))
     )
-    sa.event.listen(engine, "connect", db.enable_foreign_keys)
+    if engine.dialect.name == "sqlite":
+        sa.event.listen(engine, "connect", db.enable_foreign_keys)
     monkeypatch.setattr(db, "engine", engine)
     config = Config(str(Path(__file__).resolve().parents[1] / "alembic.ini"))
     command.upgrade(config, "head")
@@ -173,3 +178,115 @@ def test_isolation(client, trip):
         == 422
     )
     assert client.delete(f"{other}/activities/{activity}").status_code == 404
+
+
+@pytest.mark.parametrize(
+    "mutation", ["insert", "expense_trip", "expense_activity", "activity_trip"]
+)
+def test_database_rejects_cross_trip_expense(client, trip, mutation):
+    trip_id = int(trip.rsplit("/", 1)[1])
+    other_id = create(client, "/api/trips", TRIP)
+    activity = create(client, trip + "/activities", ACTIVITY)
+    other_activity = create(client, f"/api/trips/{other_id}/activities", ACTIVITY)
+    expense = create(
+        client,
+        trip + "/expenses",
+        {"title": "Билет", "amount": "10", "activity_id": activity},
+    )
+
+    # The deferred composite FK must reject the transaction even without the API.
+    with pytest.raises(sa.exc.IntegrityError):
+        with db.engine.begin() as conn:
+            if mutation == "insert":
+                conn.execute(
+                    db.expenses.insert().values(
+                        trip_id=other_id, activity_id=activity, title="Invalid", amount=1
+                    )
+                )
+            elif mutation == "expense_trip":
+                conn.execute(
+                    db.expenses.update()
+                    .where(db.expenses.c.id == expense)
+                    .values(trip_id=other_id)
+                )
+            elif mutation == "expense_activity":
+                conn.execute(
+                    db.expenses.update()
+                    .where(db.expenses.c.id == expense)
+                    .values(activity_id=other_activity)
+                )
+            else:
+                conn.execute(
+                    db.activities.update()
+                    .where(db.activities.c.id == activity)
+                    .values(trip_id=other_id)
+                )
+
+    with db.engine.connect() as conn:
+        saved = conn.execute(
+            sa.select(db.expenses).where(db.expenses.c.id == expense)
+        ).mappings().one()
+        assert saved["trip_id"] == trip_id
+        assert saved["activity_id"] == activity
+        assert conn.scalar(sa.select(sa.func.count()).select_from(db.expenses)) == 1
+
+
+def test_constraint_migration_preserves_existing_expenses(client, trip):
+    activity = create(client, trip + "/activities", ACTIVITY)
+    create(
+        client, trip + "/expenses",
+        {"title": "Билет", "amount": "10", "activity_id": activity},
+    )
+    create(client, trip + "/expenses", {"title": "Обед", "amount": "20"})
+    before = client.get(trip).json()
+    config = Config(str(Path(__file__).resolve().parents[1] / "alembic.ini"))
+    command.downgrade(config, "0001")
+    command.upgrade(config, "head")
+    assert client.get(trip).json() == before
+    assert client.delete(f"{trip}/activities/{activity}").status_code == 204
+    after = client.get(trip).json()
+    assert all(e["activity_id"] is None for e in after["expenses"])
+    assert after["total"] == before["total"]
+
+
+def test_constraint_migration_reports_existing_invalid_link(client, trip):
+    other_id = create(client, "/api/trips", TRIP)
+    activity = create(client, trip + "/activities", ACTIVITY)
+    config = Config(str(Path(__file__).resolve().parents[1] / "alembic.ini"))
+    command.downgrade(config, "0001")
+    with db.engine.begin() as conn:
+        expense_id = conn.execute(
+            db.expenses.insert().values(
+                trip_id=other_id, activity_id=activity, title="Imported", amount=10
+            )
+        ).inserted_primary_key[0]
+    with pytest.raises(RuntimeError, match=f"Expense {expense_id} references"):
+        command.upgrade(config, "head")
+    with db.engine.begin() as conn:
+        assert conn.scalar(
+            sa.select(db.expenses.c.activity_id).where(db.expenses.c.id == expense_id)
+        ) == activity
+        conn.execute(
+            db.expenses.update().where(db.expenses.c.id == expense_id)
+            .values(activity_id=None)
+        )
+    command.upgrade(config, "head")
+    assert client.get(f"/api/trips/{other_id}").json()["expenses"][0]["activity_id"] is None
+
+
+def test_activity_time_precision(client, trip):
+    values = {**ACTIVITY, "starts_at": "10:15:30.123456", "ends_at": "11:45:20.654321"}
+    activity = create(client, trip + "/activities", values)
+    assert client.put(
+        f"{trip}/activities/{activity}", json={**values, "title": "Новое название"}
+    ).status_code == 200
+    saved = client.get(trip).json()["activities"][0]
+    assert saved["title"] == "Новое название"
+    assert saved["starts_at"] == values["starts_at"]
+    assert saved["ends_at"] == values["ends_at"]
+
+
+def test_migrations_match_metadata(client):
+    with db.engine.connect() as conn:
+        context = MigrationContext.configure(conn)
+        assert compare_metadata(context, db.metadata) == []

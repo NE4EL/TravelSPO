@@ -30,6 +30,9 @@ function Field({label, name, initial, ...props}) {
 const titles = {trips:["Новая поездка","Изменить поездку"], activities:["Новое мероприятие","Изменить мероприятие"],
   expenses:["Новый расход","Изменить расход"], items:["Добавить вещь","Изменить вещь"]}
 
+// HTML time inputs support milliseconds; keep finer API precision if unchanged.
+const timeValue = value => value?.slice(0,12) || ""
+
 export function Editor({form, trip, close, saved}) {
   const {kind, row = {}, remove} = form
   const dialog = useRef(null)
@@ -40,7 +43,9 @@ export function Editor({form, trip, close, saved}) {
     e.preventDefault()
     const values = Object.fromEntries(new FormData(e.currentTarget))
     if (kind === "activities") {
-      values.starts_at ||= null; values.ends_at ||= null
+      for (const name of ["starts_at", "ends_at"]) {
+        values[name] = values[name] === timeValue(row[name]) ? row[name] || null : values[name] || null
+      }
     }
     if (kind === "expenses") values.activity_id = values.activity_id ? Number(values.activity_id) : null
     if (kind === "items") values.is_packed = row.is_packed || false
@@ -64,8 +69,8 @@ export function Editor({form, trip, close, saved}) {
         <Field type="number" label="Бюджет, ₽" name="budget_limit" initial={row.budget_limit ?? 0} min="0" max="9999999999.99" step=".01" required/></>}
       {kind === "activities" && <>
         <Field type="date" label="Дата мероприятия" name="activity_date" initial={row.activity_date || trip.start_date} min={trip.start_date} max={trip.end_date} required/>
-        <div className="pair"><Field type="time" label="Начало" name="starts_at" initial={row.starts_at?.slice(0,5)}/>
-        <Field type="time" label="Окончание" name="ends_at" initial={row.ends_at?.slice(0,5)}/></div>
+        <div className="pair"><Field type="time" step="any" label="Начало" name="starts_at" initial={timeValue(row.starts_at)}/>
+        <Field type="time" step="any" label="Окончание" name="ends_at" initial={timeValue(row.ends_at)}/></div>
         <label>Место или описание<textarea name="description" defaultValue={row.description} maxLength="2000"/></label></>}
       {kind === "expenses" && <>
         <Field type="number" label="Сумма, ₽" name="amount" min=".01" max="9999999999.99" step=".01" initial={row.amount} required/>
