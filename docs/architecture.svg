@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="360" viewBox="0 0 1120 360" font-family="Arial, sans-serif" role="img" aria-labelledby="title description">
+  <title id="title">Архитектура и обмен данными в TravelPlanner</title>
+  <desc id="description">Двунаправленные стрелки связывают браузер с FastAPI, FastAPI со слоем данных и слой данных с PostgreSQL: в одну сторону идут запросы, в обратную возвращаются результаты и ошибки. PostgreSQL отвечает на запросы, а не вызывает функции сервера. Отдельная стрелка Alembic к PostgreSQL обозначает применение миграций.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" viewBox="0 0 8 8" refX="8" refY="4" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#111"/>
+    </marker>
+  </defs>
+  <rect width="1120" height="360" fill="#fff"/>
+  <g fill="none" stroke="#777" stroke-width="1" stroke-dasharray="5 4">
+    <rect x="290" y="24" width="575" height="316"/>
+  </g>
+  <g fill="#111" font-size="15" text-anchor="middle">
+    <text x="577.5" y="50">Сервер приложения · Python 3.13</text>
+  </g>
+  <g fill="#fff" stroke="#111" stroke-width="1.2">
+    <rect x="25" y="95" width="215" height="112"/>
+    <rect x="315" y="95" width="220" height="112"/>
+    <rect x="610" y="95" width="230" height="112"/>
+    <rect x="915" y="95" width="180" height="112"/>
+    <rect x="610" y="248" width="230" height="72"/>
+  </g>
+  <g fill="#111" text-anchor="middle">
+    <g font-size="20" font-weight="bold">
+      <text x="132.5" y="126">Браузер</text>
+      <text x="425" y="126">FastAPI 0.139.0</text>
+      <text x="725" y="126">SQLAlchemy Core</text>
+      <text x="1005" y="126">PostgreSQL 16</text>
+      <text x="725" y="276">Alembic 1.13.1</text>
+    </g>
+    <g font-size="15">
+      <text x="132.5" y="155">React 18.3.1</text>
+      <text x="132.5" y="181">Интерфейс SPA</text>
+      <text x="425" y="155">REST API / файлы SPA</text>
+      <text x="425" y="181">Uvicorn 0.41.0</text>
+      <text x="725" y="155">2.0.48 / psycopg 3.3.6</text>
+      <text x="725" y="181">Доступ к данным</text>
+      <text x="1005" y="155">Аккаунты / поездки</text>
+      <text x="1005" y="181">Сеансы / планы</text>
+      <text x="725" y="302">Миграции схемы БД</text>
+    </g>
+    <g font-size="13">
+      <text x="277.5" y="123">HTTP</text>
+      <text x="572.5" y="123">Python</text>
+      <text x="877.5" y="123">SQL</text>
+      <text x="932" y="276">DDL</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#111" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)">
+    <path d="M243 153 H312"/>
+    <path d="M538 153 H607"/>
+    <path d="M843 153 H912"/>
+  </g>
+  <g fill="none" stroke="#111" stroke-width="1.5" marker-end="url(#arrow)">
+    <path d="M840 284 H1005 V210"/>
+  </g>
+  <g fill="#444" font-size="13">
+    <text x="25" y="248">Связи ↔: запросы и ответы.</text>
+    <text x="25" y="272">SQLAlchemy и psycopg —</text>
+    <text x="25" y="294">части сервера приложения.</text>
+    <text x="25" y="320">Alembic запускается до Uvicorn.</text>
+  </g>
+</svg>
