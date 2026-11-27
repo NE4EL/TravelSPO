@@ -189,7 +189,7 @@ flowchart LR
 Для горизонтальных дорожек используется `swimlane-beta` (Mermaid 11.16 и новее). Расчёт бюджета показан как логическая часть REST API.
 
 ```mermaid
-%%{init: {"theme": "base", "fontFamily": "Arial, sans-serif", "themeVariables": {"fontFamily": "Arial, sans-serif", "lineColor": "#000000", "textColor": "#000000", "edgeLabelBackground": "#ffffff"}}}%%
+%%{init: {"theme": "base", "fontFamily": "Arial, sans-serif", "themeVariables": {"fontSize": "24px", "fontFamily": "Arial, sans-serif", "lineColor": "#000000", "textColor": "#000000", "edgeLabelBackground": "#ffffff"}}}%%
 swimlane-beta LR
   %% Пул «Планирование путешествия»: 6 горизонтальных дорожек
     %% Дорожка 1: Гость
